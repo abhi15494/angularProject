@@ -1,0 +1,31 @@
+[{
+	"name": "yoshi",
+	"belt": "green",
+	"rate": 12031,
+	"status": true,
+	"thumb": "./images/1.png"
+}, {
+	"name": "adam",
+	"belt": "black",
+	"rate": 8128,
+	"status": true,
+	"thumb": "./images/2.png"
+}, {
+	"name": "max",
+	"belt": "red",
+	"rate": 71237,
+	"status": true,
+	"thumb": "./images/3.png"
+}, {
+	"name": "Abhishek",
+	"belt": "orange",
+	"rate": 21391,
+	"status": false,
+	"thumb": "./images/4.png"
+}, {
+	"name": "Syskas",
+	"belt": "black",
+	"rate": 81923,
+	"status": true,
+	"thumb": "./images/5.png"
+}]

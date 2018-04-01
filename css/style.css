@@ -1,0 +1,43 @@
+body{
+    font-family: verdana;
+    box-sizing: border-box;
+    min-height: 100vh;
+}
+
+.red{
+    color: red;
+}
+
+.green{
+    color: green
+}
+
+.flex-container{
+    display: flex !important;
+}
+
+.flex-sa{
+    justify-content: space-around;
+}
+
+.flex-sb{
+    justify-content: space-between;
+}
+
+.flex-ai-sa{
+    align-items: space-around;
+}
+
+.flex-fd-col{
+    flex-direction: column;
+}
+
+footer > .panel{
+    background-color: rgb(19, 19, 19);
+    margin-bottom: 0;
+    padding: 20px 41px;
+    color: white;
+    font-size: 14px;
+    text-align: center;
+    border-radius: 0px;
+}
