@@ -24,7 +24,9 @@ app.directive("random-data", [function(){
     return {
         // E for element like html and A is for attribute in html
         restrict: "E",
-        scope: 
+        scope: {
+            
+        }
     };
 }]);
 
