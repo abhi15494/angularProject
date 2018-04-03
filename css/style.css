@@ -1,5 +1,5 @@
 body{
-    font-family: raleway;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
     box-sizing: border-box;
     min-height: 100vh;
 }
@@ -16,6 +16,14 @@ noscript{
 
 main{
     min-height: calc( 100vh - 119px );
+    overflow: hidden;
+    width: 920px;
+    margin: 0 auto;
+}
+
+.bg-white{
+    color: black;
+    background-color: white;
 }
 
 .red{
@@ -61,12 +69,51 @@ footer > .panel{
 }
 
 /* ANGULAR ANIMATION */
-#fade1.ng-enter{
-    transition: 0.5 ease-in-out all;
+main.ng-enter{
+    transition: 0.5s ease-in-out all;
+    transform: translateX(0%);
     opacity: 0;
 }
 
-#fade1.ng-enter.ng-enter-active{
+main.ng-enter.ng-enter-active{
+    opacity: 1;
+    transform: translateX(100%);
+}
+
+main.ng-leave{
+    transition: 0.5s ease-in-out all;
+    transform: translateX(0%);
     opacity: 1;
 }
 
+main.ng-leave.ng-leave-active{
+    transform: translateX(-100%);
+    opacity: 0;
+}
+
+.list li.ng-enter{
+    transition: 1s ease-in-out all;
+    opacity: 0;
+    transform: translateX(40px);
+}
+
+.list li.ng-enter.ng-enter-active{
+    opacity: 1;
+    transform: translateX(0px);
+}
+
+.list li.ng-leave{
+    transition: 0.3s ease-in-out all;
+    opacity: 1;
+    transform: translateX(0px);
+}
+
+.list li.ng-leave.ng-leave-active{
+    opacity: 0;
+    transform: translateX(50px);
+}
+
+.list li.ng-leave-stagger{
+    transition-delay: 0.2s;
+    transition-duration: 0;
+}

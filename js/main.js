@@ -3,8 +3,8 @@ var app = angular.module('myapp', ['ngRoute', 'ngAnimate']);
 app.config(['$routeProvider', function($routeProvider){
     $routeProvider
     .when("/home", {
-        templateUrl: './views/home.html'
-        // ,controller: 'appController' 
+        templateUrl: './views/home.html',
+        controller: 'appController' 
     })
     .when("/result", {
         templateUrl: './views/random.html'
@@ -32,13 +32,13 @@ app.directive("randomData", [function(){
         restrict: "E", // Used as an element 
         // To get access and manipulate data between modal and view
         scope: { // Isolate scope
-            datatopass: "=", //Key value pair to access data and = means we are binding the data together
-            titletopass: "="
+            data: "=", //Key value pair to access data and = means we are binding the data together
+            title: "="
         },
         templateUrl: "./views/random.html", //
         // template: "<img ng-src="{{listp[0].thumb}}"/>", //use template to send data to views
-        transclude: true,
-        replace: true,
+        transclude: true, // to support the angular view to access other elements 
+        replace: true, // to not showing the randomData tag in developer option 
         controller: function($scope){
             $scope.random = Math.floor(Math.random() * 4);
         }
@@ -66,9 +66,13 @@ app.controller("appController", ['$scope', '$http', function($scope, $http){
         $scope.list.true = false;
     }
     
-    $http.get('../eg1/data/data.json').then(function(response){
+    $http.get('./data/data.json').then(function(response){
         $scope.list = response.data;
     });
+
+    $scope.removeAll = function(){
+        $scope.list = [];
+    };
 
     // Convert object to JSON
     // console.log(angular.toJson($scope.list));

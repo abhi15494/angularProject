@@ -1,4 +1,4 @@
-<div class="container">
+<div class="">
     <br />
     <form role="form" ng-submit="addnin()">
         <legend>Add NINJA</legend>
@@ -28,7 +28,7 @@
     <br />
     <input type="text" class="form-control" name="search" ng-model="search" id="" placeholder="Search">
     <hr />
-    <ul class="list-group">
+    <ul class="list-group list">
         <li class="list-group-item flex-container flex-sb" ng-repeat="nin in list | orderBy: '-name' | filter: search" ng-show="nin.status">
             {{nin.name}} - {{nin.rate | currency: "Rs."}}
             <code>{{nin.belt}}</code>
@@ -36,4 +36,7 @@
             <button class="btn btn-danger" ng-click="ninclose(nin)">Close</button>
         </li>
     </ul>
+    
+    <button type="button" class="btn btn-info" ng-click="removeAll()">Clear all</button>
+    
 </div>    
