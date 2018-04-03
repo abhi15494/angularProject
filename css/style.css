@@ -1,7 +1,17 @@
 body{
-    font-family: verdana;
+    font-family: raleway;
     box-sizing: border-box;
     min-height: 100vh;
+}
+
+noscript{
+    font-size: 20px;
+    text-align: center;
+    color: #ff4e4e;
+    margin-top: 30%;
+    font-weight: bold;
+    background-color: black;
+    padding: 30px;
 }
 
 main{
@@ -49,3 +59,14 @@ footer > .panel{
 .navbar{
     margin-bottom: 0px !important;
 }
+
+/* ANGULAR ANIMATION */
+#fade1.ng-enter{
+    transition: 0.5 ease-in-out all;
+    opacity: 0;
+}
+
+#fade1.ng-enter.ng-enter-active{
+    opacity: 1;
+}
+

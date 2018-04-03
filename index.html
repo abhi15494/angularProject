@@ -1,21 +1,28 @@
 <!DOCTYPE html>
-<html lang="en" ng-app="myapp">
+<html lang="en">
 <head>
     <title>myAngular</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="./css/style.css">
-    <link rel="stylesheet" href="./css/bootstrap.css">
-    <script src="./js/angular.js"></script>
-    <script src="./js/angular-route.min.js"></script>
-    <script src="./js/main.js"></script>
-</head>
-<body class="flex-container flex-sb flex-fd-col">
-    <div ng-include="'./global/header.html'"></div>
     
-    <main ng-view></main>
-
-    <div ng-include="'./global/footer.html'"></div>
-</body>
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular-animate.js"></script> -->
+        <link rel="stylesheet" href="./css/bootstrap.css">
+        <link rel="stylesheet" href="./css/style.css">
+        
+        <script src="./js/angular.js"></script>
+        <script src="./js/angular-route.min.js"></script>
+        <script src="./js/angular-animate.min.js"></script>
+        
+        <script src="./js/main.js"></script>
+    </head>
+    <body class="flex-container flex-sb flex-fd-col" ng-app="myapp">
+        <noscript>Please enable javascript first.</noscript>
+        <div ng-include="'./global/header.html'"></div>
+        
+        <main id="fade1" ng-view></main>
+        
+        <div ng-include="'./global/footer.html'"></div>
+    </body>
 </html>

@@ -1,16 +1,21 @@
-var app = angular.module('myapp', ['ngRoute']);
+var app = angular.module('myapp', ['ngRoute', 'ngAnimate']);
 // Function before app run
 app.config(['$routeProvider', function($routeProvider){
     $routeProvider
     .when("/home", {
-        templateUrl: './views/home.html',
-        controller: 'appController' 
+        templateUrl: './views/home.html'
+        // ,controller: 'appController' 
+    })
+    .when("/result", {
+        templateUrl: './views/random.html'
     })
     .when("/data", { 
         templateUrl: './views/data.html',
         controller: 'appController'
     })
-    .when("/contact", { templateUrl: './views/contact.html' })
+    .when("/contact", { 
+        templateUrl: './views/contact.html' 
+    })
     .otherwise({
         redirectTo: '/home'
     })
@@ -20,12 +25,22 @@ app.config(['$routeProvider', function($routeProvider){
 app.run(function(){
 });
 
-app.directive("random-data", [function(){
+app.directive("randomData", [function(){
+    // Define properties and functionality
     return {
-        // E for element like html and A is for attribute in html
-        restrict: "E",
-        scope: {
-            
+        // E for element like html and A is for attribute in html { C and N }
+        restrict: "E", // Used as an element 
+        // To get access and manipulate data between modal and view
+        scope: { // Isolate scope
+            datatopass: "=", //Key value pair to access data and = means we are binding the data together
+            titletopass: "="
+        },
+        templateUrl: "./views/random.html", //
+        // template: "<img ng-src="{{listp[0].thumb}}"/>", //use template to send data to views
+        transclude: true,
+        replace: true,
+        controller: function($scope){
+            $scope.random = Math.floor(Math.random() * 4);
         }
     };
 }]);
