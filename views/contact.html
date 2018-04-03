@@ -1,24 +1,24 @@
 <div class="panel panel-default">
-    <div class="panel-heading">
-        <h1 class="panel-title text-danger">Contact Page</h1>
-    </div>
     <div class="panel-body">
-            <p class="text-success">
-                    Lorem ipsum dolor sit amet, in nibh expetendis nam. Vel iisque electram ex, eos at ubique ponderum incorrupte, 
-                    assum vitae nec ad. Mei cu prima iusto intellegebat. Quidam vivendo liberavisse no has, no eam aeterno partiendo 
-                    maiestatis. Sed inani percipit ex, eam vivendum gloriatur ne, te elitr electram vix. Duo nostrud postulant te.
-                    <br />
-                    Et pri appetere sapientem definitionem, debet honestatis an per, eam ea probo legendos vituperata. Mei ipsum 
-                    dicat scribentur te, ne propriae argumentum quo. Sonet molestiae duo ei, est ea utamur vituperatoribus. Ut 
-                    moderatius vituperata nec.
-                    <br />                    
-                    Ex nec erant putant sensibus, dignissim inciderint nec in, no iriure conclusionemque his. In cum laboramus 
-                    voluptatibus, etiam paulo id quo. Mea eu rebum fabulas qualisque. No eos quod reprimique, ad his liber 
-                    mediocrem dissentias.
-                    <br />                    
-                    Labore ponderum oporteat ea pro, eos at nonumy omittam repudiandae. Ius et legimus invidunt, pro soluta causae 
-                    in. Iudico accommodare ut vix, wisi adolescens theophrastus ei cum. Pro at nusquam singulis. Eum minim postea 
-                    nonumes in, mea mazim commune te. Vim habemus postulant ne.
-            </p>
-      </div>
+        
+        <form action="www.example.com" method="GET" novalidate>
+            <legend>Contact us form</legend>
+            <div class="form-group">
+                <label for="name">Name</label>
+            <input type="text" name="name" class="form-control" id="" placeholder="Enter Name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" name="email" class="form-control" id="" placeholder="Enter Email" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="message">Message</label>
+                <textarea name="" id="input${1/(\w+)/\u\1/g}" class="form-control" rows="3" placeholder="Enter Message" required="required"></textarea>
+            </div>
+        
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+               
+    </div>
 </div>
